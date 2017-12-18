@@ -6,8 +6,8 @@ import Loading from "./Loading";
 import NotFound from "./NotFound";
 import Home from "./Home";
 
-const Counter = Loadable({
-    loader: () => import("../views/counter"),
+const Races = Loadable({
+    loader: () => import("../views/races"),
     loading: Loading
 });
 
@@ -18,7 +18,7 @@ class App extends React.Component {
                 <Layout>
                     <Switch>
                         <Route exact path="/" component={Home}/>
-                        <Route path="/counter" component={Counter}/>
+                        <Route path="/races" component={Races}/>
                         <Route component={NotFound}/>
                     </Switch>
                 </Layout>

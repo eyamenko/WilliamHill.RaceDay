@@ -4,7 +4,7 @@ class Home extends React.Component {
     render() {
         return (
             <p className="text-center">
-                To get started, edit <code>Home.tsx</code> and save to hot reload.
+                To get started, proceed to <code>Races</code> to view all races.
             </p>
         );
     }

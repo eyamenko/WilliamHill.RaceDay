@@ -23,8 +23,8 @@ class Navbar extends React.Component<IProps> {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <Link className="navbar-brand" to="https://github.com/eyamenko/spa-rocks" target="_blank">
-                    SPA Rocks!
+                <Link className="navbar-brand" to="https://github.com/eyamenko/techchallenge_eugene" target="_blank">
+                    Race Day
                 </Link>
                 <button className="navbar-toggler" type="button" onClick={() => this.store.toggleNavbar()}
                         aria-controls="navbar" aria-expanded={this.store.navbarOpen} aria-label="Toggle navigation">
@@ -36,7 +36,7 @@ class Navbar extends React.Component<IProps> {
                             <NavLink className="nav-link" exact to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/counter">Counter</NavLink>
+                            <NavLink className="nav-link" to="/races">Races</NavLink>
                         </li>
                     </ul>
                 </div>

@@ -6,7 +6,7 @@ class Footer extends React.Component {
             <footer>
                 <div className="container">
                     <p className="text-center">
-                        <strong>SPA Rocks!</strong> by <a href="https://github.com/eyamenko" target="_blank">
+                        <strong>Race Day</strong> by <a href="https://github.com/eyamenko" target="_blank">
                         Eugene Yamenko</a>. The source code is licensed <a
                         href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
                     </p>
