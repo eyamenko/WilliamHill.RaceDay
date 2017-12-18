@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WilliamHill.RaceDay.Contracts\WilliamHill.RaceDay.Contracts.csproj" />
+    <ProjectReference Include="..\WilliamHill.RaceDay.Models\WilliamHill.RaceDay.Models.csproj" />
+  </ItemGroup>
+</Project>
