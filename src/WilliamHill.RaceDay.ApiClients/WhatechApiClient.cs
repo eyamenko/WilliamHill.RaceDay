@@ -51,5 +51,29 @@ namespace WilliamHill.RaceDay.ApiClients
                 return JsonConvert.DeserializeObject<List<Customer>>(json);
             }
         }
+
+        public async Task<IList<Bet>> GetBets()
+        {
+            using (var response = await _httpClient.GetAsync($"/api/GetBets?name={_name}"))
+            {
+                response.EnsureSuccessStatusCode();
+
+                var json = await response.Content.ReadAsStringAsync();
+
+                return JsonConvert.DeserializeObject<List<Bet>>(json);
+            }
+        }
+
+        public async Task<IList<Race>> GetRaces()
+        {
+            using (var response = await _httpClient.GetAsync($"/api/GetRaces?name={_name}"))
+            {
+                response.EnsureSuccessStatusCode();
+
+                var json = await response.Content.ReadAsStringAsync();
+
+                return JsonConvert.DeserializeObject<List<Race>>(json);
+            }
+        }
     }
 }

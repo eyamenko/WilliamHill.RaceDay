@@ -23,5 +23,21 @@ namespace WilliamHill.RaceDay.Tests
 
             Assert.IsTrue(customers.Any());
         }
+
+        [TestMethod]
+        public async Task TestGetBets()
+        {
+            var bets = await _apiClient.GetBets();
+
+            Assert.IsTrue(bets.Any());
+        }
+
+        [TestMethod]
+        public async Task TestGetRaces()
+        {
+            var races = await _apiClient.GetRaces();
+
+            Assert.IsTrue(races.Any());
+        }
     }
 }
