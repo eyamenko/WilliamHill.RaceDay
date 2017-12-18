@@ -37,34 +37,6 @@ namespace WilliamHill.RaceDay.Tests
                                 Id = 1,
                                 Name = "Horse 1",
                                 Odds = 5.5m
-                            },
-                            new Horse
-                            {
-                                Id = 2,
-                                Name = "Horse 2",
-                                Odds = 4.4m
-                            }
-                        }
-                    },
-                    new Race
-                    {
-                        Id = 2,
-                        Name = "Race 2",
-                        Start = DateTime.Today,
-                        Status = RaceStatus.Completed,
-                        Horses = new List<Horse>
-                        {
-                            new Horse
-                            {
-                                Id = 3,
-                                Name = "Horse 3",
-                                Odds = 3.7m
-                            },
-                            new Horse
-                            {
-                                Id = 4,
-                                Name = "Horse 4",
-                                Odds = 7.3m
                             }
                         }
                     }
@@ -118,12 +90,12 @@ namespace WilliamHill.RaceDay.Tests
         }
 
         [TestMethod]
-        public async Task CanGetHorses()
+        public async Task CanListHorses()
         {
             var races = await _raceService.GetRaces();
             var race = races.First();
 
-            Assert.AreEqual(2, race.Horses.Count);
+            Assert.AreEqual(1, race.Horses.Count);
         }
 
         [TestMethod]

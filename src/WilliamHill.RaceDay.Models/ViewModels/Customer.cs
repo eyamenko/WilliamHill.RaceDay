@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public int TotalBets { get; set; }
-        public decimal TotalAmount { get; set; }
+        public decimal TotalAmountBet { get; set; }
         public bool IsRisky { get; set; }
     }
 }
