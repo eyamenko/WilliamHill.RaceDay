@@ -54,7 +54,7 @@ namespace WilliamHill.RaceDay.ApiClients
 
         public async Task<IList<Bet>> GetBets()
         {
-            using (var response = await _httpClient.GetAsync($"/api/GetBets?name={_name}"))
+            using (var response = await _httpClient.GetAsync($"/api/GetBetsV2?name={_name}"))
             {
                 response.EnsureSuccessStatusCode();
 

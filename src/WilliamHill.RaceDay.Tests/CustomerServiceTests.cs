@@ -28,7 +28,12 @@ namespace WilliamHill.RaceDay.Tests
                     {
                         Id = 1,
                         Name = "John Doe"
-                    }
+                    },
+                    new Customer
+                    {
+                        Id = 2,
+                        Name = "Jane Doe"
+                    },
                 };
 
                 return Task.FromResult(customers);
@@ -50,14 +55,28 @@ namespace WilliamHill.RaceDay.Tests
                         CustomerId = 1,
                         HorseId = 2,
                         RaceId = 2,
-                        Stake = 200.0m
+                        Stake = 201.0m
+                    },
+                    new Bet
+                    {
+                        CustomerId = 2,
+                        HorseId = 3,
+                        RaceId = 3,
+                        Stake = 120m
+                    },
+                    new Bet
+                    {
+                        CustomerId = 2,
+                        HorseId = 4,
+                        RaceId = 4,
+                        Stake = 120m
                     }
                 };
 
                 return Task.FromResult(bets);
             });
 
-            _customerService = new CustomerService(apiClientMock.Object, 200m);
+            _customerService = new CustomerService(apiClientMock.Object, 200);
         }
 
         [TestMethod]
@@ -66,7 +85,7 @@ namespace WilliamHill.RaceDay.Tests
             var customerList = await _customerService.GetCustomers();
             var customers = customerList.Customers;
 
-            Assert.AreEqual(1, customers.Count);
+            Assert.AreEqual(2, customers.Count);
         }
 
         [TestMethod]
@@ -86,7 +105,7 @@ namespace WilliamHill.RaceDay.Tests
             var customers = customerList.Customers;
             var customer = customers.First();
 
-            Assert.AreEqual(213.37m, customer.TotalAmountBet);
+            Assert.AreEqual(214.37m, customer.TotalAmountBet);
         }
 
         [TestMethod]
@@ -94,17 +113,27 @@ namespace WilliamHill.RaceDay.Tests
         {
             var customerList = await _customerService.GetCustomers();
 
-            Assert.AreEqual(213.37m, customerList.TotalAmountBet);
+            Assert.AreEqual(454.37m, customerList.TotalAmountBet);
         }
 
         [TestMethod]
-        public async Task CanGetCustomerStatus()
+        public async Task CanDetermineRiskyCustomer()
         {
             var customerList = await _customerService.GetCustomers();
             var customers = customerList.Customers;
             var customer = customers.First();
 
             Assert.IsTrue(customer.IsRisky);
+        }
+
+        [TestMethod]
+        public async Task CanDetermineNonRiskyCustomer()
+        {
+            var customerList = await _customerService.GetCustomers();
+            var customers = customerList.Customers;
+            var customer = customers.Last();
+
+            Assert.IsFalse(customer.IsRisky);
         }
     }
 }

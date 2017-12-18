@@ -11,6 +11,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WilliamHill.RaceDay.ApiClients\WilliamHill.RaceDay.ApiClients.csproj" />
+    <ProjectReference Include="..\WilliamHill.RaceDay.Contracts\WilliamHill.RaceDay.Contracts.csproj" />
+    <ProjectReference Include="..\WilliamHill.RaceDay.Models\WilliamHill.RaceDay.Models.csproj" />
+    <ProjectReference Include="..\WilliamHill.RaceDay.Services\WilliamHill.RaceDay.Services.csproj" />
+  </ItemGroup>
   <Target Name="PublishClient" AfterTargets="ComputeFilesToPublish">
     <Exec Command="npm install" />
     <Exec Command="node node_modules/webpack/bin/webpack.js -p" />

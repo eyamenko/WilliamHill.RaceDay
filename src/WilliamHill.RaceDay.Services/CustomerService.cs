@@ -28,14 +28,13 @@ namespace WilliamHill.RaceDay.Services
                 Customers = customers.Select(c =>
                 {
                     var customerBets = bets.Where(b => b.CustomerId == c.Id).ToList();
-                    var totalAmountBet = customerBets.Sum(b => b.Stake);
 
                     return new Customer
                     {
                         Id = c.Id,
                         TotalBets = customerBets.Count,
-                        TotalAmountBet = totalAmountBet,
-                        IsRisky = totalAmountBet > _riskThreshold
+                        TotalAmountBet = customerBets.Sum(b => b.Stake),
+                        IsRisky = customerBets.Any(b => b.Stake > _riskThreshold)
                     };
                 }).ToList()
             };
