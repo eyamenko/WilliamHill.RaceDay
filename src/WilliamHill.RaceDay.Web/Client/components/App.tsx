@@ -11,6 +11,11 @@ const Races = Loadable({
     loading: Loading
 });
 
+const Customers = Loadable({
+    loader: () => import("../views/customers"),
+    loading: Loading
+});
+
 class App extends React.Component {
     render() {
         return (
@@ -19,6 +24,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/races" component={Races}/>
+                        <Route path="/customers" component={Customers}/>
                         <Route component={NotFound}/>
                     </Switch>
                 </Layout>
