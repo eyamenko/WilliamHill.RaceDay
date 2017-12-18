@@ -22,18 +22,28 @@ namespace WilliamHill.RaceDay.Services
             var races = await _apiClient.GetRaces();
             var bets = await _apiClient.GetBets();
 
-            return races.Select(r => new Race
+            return races.Select(r =>
             {
-                Id = r.Id,
-                Status = r.Status,
-                TotalAmount = bets.Where(b => b.RaceId == r.Id).Sum(b => b.Stake),
-                Horses = r.Horses.Select(h => new Horse
+                var raceBets = bets.Where(b => b.RaceId == r.Id).ToList();
+
+                return new Race
                 {
-                    Id = h.Id,
-                    Name = h.Name,
-                    TotalBets = bets.Count(b => b.RaceId == r.Id && b.HorseId == h.Id),
-                    TotalPayout = bets.Where(b => b.RaceId == r.Id && b.HorseId == h.Id).Sum(b => b.Stake) * h.Odds
-                }).ToList()
+                    Id = r.Id,
+                    Status = r.Status,
+                    TotalAmount = raceBets.Sum(b => b.Stake),
+                    Horses = r.Horses.Select(h =>
+                    {
+                        var horseBets = raceBets.Where(b => b.HorseId == h.Id).ToList();
+
+                        return new Horse
+                        {
+                            Id = h.Id,
+                            Name = h.Name,
+                            TotalBets = horseBets.Count,
+                            TotalPayout = horseBets.Sum(b => b.Stake) * h.Odds
+                        };
+                    }).ToList()
+                };
             }).ToList();
         }
     }

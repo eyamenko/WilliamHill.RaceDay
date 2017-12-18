@@ -57,7 +57,7 @@ namespace WilliamHill.RaceDay.Tests
                 return Task.FromResult(bets);
             });
 
-            _customerService = new CustomerService(apiClientMock.Object);
+            _customerService = new CustomerService(apiClientMock.Object, 200m);
         }
 
         [TestMethod]
