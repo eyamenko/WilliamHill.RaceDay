@@ -4,7 +4,7 @@ interface Race {
     id: number;
     status: number;
     totalAmount: number;
-    horses: Array<Horse>
+    horses: Array<Horse>;
 }
 
 export default Race;
