@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilliamHill.RaceDay.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilliamHill.RaceDay.Web", "src\WilliamHill.RaceDay.Web\WilliamHill.RaceDay.Web.csproj", "{80DF41CC-A4FD-4780-B0FC-717AAA8D4335}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilliamHill.RaceDay.Services", "src\WilliamHill.RaceDay.Services\WilliamHill.RaceDay.Services.csproj", "{89B7899E-CBBE-45E6-BC20-AB6ABB0E680F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{80DF41CC-A4FD-4780-B0FC-717AAA8D4335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80DF41CC-A4FD-4780-B0FC-717AAA8D4335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80DF41CC-A4FD-4780-B0FC-717AAA8D4335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B7899E-CBBE-45E6-BC20-AB6ABB0E680F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B7899E-CBBE-45E6-BC20-AB6ABB0E680F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B7899E-CBBE-45E6-BC20-AB6ABB0E680F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B7899E-CBBE-45E6-BC20-AB6ABB0E680F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{C27C0C78-9997-4C7F-9526-F7E58DC49655} = {13D8167F-B2E9-4C9B-94A9-51B29015B03F}
 		{AC5E1BDB-2B55-4A9E-807B-D88B4F7709CE} = {13D8167F-B2E9-4C9B-94A9-51B29015B03F}
 		{5A745294-D1DF-44CB-944A-9883898AF90F} = {7E2012B5-9562-4A4C-A188-477A5E5029ED}
+		{89B7899E-CBBE-45E6-BC20-AB6ABB0E680F} = {13D8167F-B2E9-4C9B-94A9-51B29015B03F}
 	EndGlobalSection
 EndGlobal

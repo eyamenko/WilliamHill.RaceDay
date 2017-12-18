@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WilliamHill.RaceDay.Models;
+using WilliamHill.RaceDay.Models.ApiModels;
 
 namespace WilliamHill.RaceDay.Contracts.ApiClients
 {

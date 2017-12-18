@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WilliamHill.RaceDay.Models
+namespace WilliamHill.RaceDay.Models.ApiModels
 {
     public class Race
     {

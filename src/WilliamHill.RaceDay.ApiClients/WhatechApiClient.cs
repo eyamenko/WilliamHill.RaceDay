@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using WilliamHill.RaceDay.Contracts.ApiClients;
-using WilliamHill.RaceDay.Models;
+using WilliamHill.RaceDay.Models.ApiModels;
 
 namespace WilliamHill.RaceDay.ApiClients
 {

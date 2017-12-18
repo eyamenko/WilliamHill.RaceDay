@@ -1,4 +1,4 @@
-﻿namespace WilliamHill.RaceDay.Models
+﻿namespace WilliamHill.RaceDay.Models.ApiModels
 {
     public class Horse
     {
