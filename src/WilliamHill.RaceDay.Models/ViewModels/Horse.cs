@@ -5,6 +5,6 @@
         public int Id { get; set; }
         public string Name { get; set; }
         public int TotalBets { get; set; }
-        public decimal TotalPayOut { get; set; }
+        public decimal TotalPayout { get; set; }
     }
 }

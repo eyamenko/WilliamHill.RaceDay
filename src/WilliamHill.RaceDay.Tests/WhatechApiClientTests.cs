@@ -17,7 +17,7 @@ namespace WilliamHill.RaceDay.Tests
         }
 
         [TestMethod]
-        public async Task TestGetCustomers()
+        public async Task CanGetCustomers()
         {
             var customers = await _apiClient.GetCustomers();
 
@@ -25,7 +25,7 @@ namespace WilliamHill.RaceDay.Tests
         }
 
         [TestMethod]
-        public async Task TestGetBets()
+        public async Task CanGetBets()
         {
             var bets = await _apiClient.GetBets();
 
@@ -33,7 +33,7 @@ namespace WilliamHill.RaceDay.Tests
         }
 
         [TestMethod]
-        public async Task TestGetRaces()
+        public async Task CanGetRaces()
         {
             var races = await _apiClient.GetRaces();
 
