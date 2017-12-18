@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilliamHill.RaceDay.ApiClients", "src/WilliamHill.RaceDay.ApiClients/WilliamHill.RaceDay.ApiClients.csproj", "{63E94D4C-32AC-4C7C-9AE5-522870AE6570}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{13D8167F-B2E9-4C9B-94A9-51B29015B03F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63E94D4C-32AC-4C7C-9AE5-522870AE6570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E94D4C-32AC-4C7C-9AE5-522870AE6570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E94D4C-32AC-4C7C-9AE5-522870AE6570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E94D4C-32AC-4C7C-9AE5-522870AE6570}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63E94D4C-32AC-4C7C-9AE5-522870AE6570} = {13D8167F-B2E9-4C9B-94A9-51B29015B03F}
+	EndGlobalSection
+EndGlobal
