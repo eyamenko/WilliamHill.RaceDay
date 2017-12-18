@@ -36,13 +36,13 @@ namespace WilliamHill.RaceDay.Tests
                             {
                                 Id = 1,
                                 Name = "Horse 1",
-                                Odds = 5.5
+                                Odds = 5.5m
                             },
                             new Horse
                             {
                                 Id = 2,
                                 Name = "Horse 2",
-                                Odds = 4.4
+                                Odds = 4.4m
                             }
                         }
                     },
@@ -58,13 +58,13 @@ namespace WilliamHill.RaceDay.Tests
                             {
                                 Id = 3,
                                 Name = "Horse 3",
-                                Odds = 3.7
+                                Odds = 3.7m
                             },
                             new Horse
                             {
                                 Id = 4,
                                 Name = "Horse 4",
-                                Odds = 7.3
+                                Odds = 7.3m
                             }
                         }
                     }
